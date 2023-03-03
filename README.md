@@ -1,10 +1,25 @@
 # Kollier Martin: Full-Stack Developer <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Circle-icons-stack.svg/2048px-Circle-icons-stack.svg.png" width="35" height="35">
 ## About Me
-Hey, my name is Kollier Martin. Apparently I have two last names haha. Kollier is pronounced (Call-Yer) and the pronunciation with Martin is a given. I am a Full-Stack developer with around 2 years of experience. I mostly handle project logic pertaining to anything Java related, but I also have a bit of experience in front-end development with Angular/React.
 
-Email: kollierm@yahoo.com
+```java
+class Greeting {
+  public static void main (String[] args) {
+    sayHello();
+  }
 
-### Skills
+  private static void sayHello() {
+    System.out.println("Hello world, my name is Kollier Martin.");
+  }
+}
+```
+
+Apparently I have two last names :laughing:. Kollier is pronounced (Call-Yer) and the pronunciation with Martin is a given. I am a Full-Stack developer with around 2 years of experience. I mostly handle project logic pertaining to anything Java related, but I also have a bit of experience in front-end development with Angular/React. The reason I am in this industry is because I love to code. In my spare time, I will practice new languages, work on my knowledge of fundamentals, and take swings at problems that involve complex algorithms (that may never be used in normal environments). My hobbies are: traveling, gaming, reading, 
+
+### • Contact Information •   
+Email: kollierm@yahoo.com   
+Work Phone: (Available upon request)
+
+### • Skills •
 <div>
   <a href="https://www.java.com/en/">
     <img src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/512/java-icon.png" width="50" height="50">
@@ -31,7 +46,7 @@ Email: kollierm@yahoo.com
   </a>
 <div />
 
-### Social Networks
+### • Social Networks •
 <a href="https://github.com/kollier-martin">
   <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="50" height="50">
 </a>
@@ -40,7 +55,7 @@ Email: kollierm@yahoo.com
   <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="50" height="50">
 </a> <br />
 
-### Project Experience
+### • Project Experience •
 *[March 2022 - March 2023]*     
 **Commercial Experience Layer (AMEX)**    
 &nbsp;  • Developed reactive APIs, from the ground up, involving B2B operations for client consumption. These APIs were used to store, process, and manipulate client data.   
