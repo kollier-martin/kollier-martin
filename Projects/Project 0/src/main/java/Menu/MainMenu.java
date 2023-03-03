@@ -5,8 +5,7 @@ import java.util.Scanner;
 
 public class MainMenu extends PrintView {
 
-    public MainMenu (Scanner scn)
-    {
+    public MainMenu(Scanner scn) {
         super(MainMenu.class, scn);
     }
 

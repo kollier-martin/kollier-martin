@@ -19,11 +19,11 @@ public class Customer {
      * Parameterized Constructor.
      *
      * @param CUSTOMER_ID The value that will be set to this.CUSTOMER_ID
-     * @param EMAIL The value that will be set to this.EMAIL
-     * @param LAST_NAME The value that will be set to this.LAST_NAME
-     * @param FIRST_NAME The value that will be set to this.FIRST_NAME
+     * @param EMAIL       The value that will be set to this.EMAIL
+     * @param LAST_NAME   The value that will be set to this.LAST_NAME
+     * @param FIRST_NAME  The value that will be set to this.FIRST_NAME
      */
-    public Customer(int CUSTOMER_ID, String EMAIL,  String LAST_NAME, String FIRST_NAME) {
+    public Customer(int CUSTOMER_ID, String EMAIL, String LAST_NAME, String FIRST_NAME) {
         this.CUSTOMER_ID = CUSTOMER_ID;
         this.EMAIL = EMAIL;
         this.LAST_NAME = LAST_NAME;
@@ -33,8 +33,8 @@ public class Customer {
     /**
      * Parameterized Constructor.
      *
-     * @param EMAIL The value that will be set to this.EMAIL
-     * @param LAST_NAME The value that will be set to this.LAST_NAME
+     * @param EMAIL      The value that will be set to this.EMAIL
+     * @param LAST_NAME  The value that will be set to this.LAST_NAME
      * @param FIRST_NAME The value that will be set to this.FIRST_NAME
      */
     public Customer(String EMAIL, String LAST_NAME, String FIRST_NAME) {
@@ -48,7 +48,7 @@ public class Customer {
         return CUSTOMER_ID;
     }
 
-    public void setCusID (int CUSTOMER_ID) {
+    public void setCusID(int CUSTOMER_ID) {
         this.CUSTOMER_ID = CUSTOMER_ID;
     }
 
@@ -68,13 +68,21 @@ public class Customer {
         this.LAST_NAME = LAST_NAME;
     }
 
-    public int getUserID() { return USER_ID; }
+    public int getUserID() {
+        return USER_ID;
+    }
 
-    public void setUserID(int USER_ID) { this.USER_ID = USER_ID; }
+    public void setUserID(int USER_ID) {
+        this.USER_ID = USER_ID;
+    }
 
-    public String getEMAIL() { return EMAIL; }
+    public String getEMAIL() {
+        return EMAIL;
+    }
 
-    public void setEMAIL(String EMAIL) { this.EMAIL = EMAIL; }
+    public void setEMAIL(String EMAIL) {
+        this.EMAIL = EMAIL;
+    }
 
     public String toString() {
         return "Customer " + getCusID() + " - " + getEMAIL() + ", " + getLastName() + ", " + getFirstName();

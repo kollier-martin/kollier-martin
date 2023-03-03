@@ -10,7 +10,7 @@ import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class AccountBalance extends PrintView{
+public class AccountBalance extends PrintView {
     public AccountBalance(Scanner scn) {
         super(AccountBalance.class, scn);
     }
@@ -22,7 +22,7 @@ public class AccountBalance extends PrintView{
         NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.US);
 
         System.out.printf("\n============= %s's Balances Page ===============" +
-                    "\nBalance for Account(s):", pm.getCurrentCustomer().getFirstName());
+                "\nBalance for Account(s):", pm.getCurrentCustomer().getFirstName());
 
         try {
             accounts = accDAO.getAllByFirstName(pm.getCurrentCustomer().getFirstName());

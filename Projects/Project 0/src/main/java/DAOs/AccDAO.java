@@ -8,7 +8,6 @@
 
 package DAOs;
 
-import Utils.PrintManager;
 import Models.Account;
 import MyCollections.MyArrayList;
 
@@ -52,9 +51,9 @@ public class AccDAO implements BankDAO<Account> {
     /**
      * This method simply creates or updates data for an account in the Accounts table
      * Either Create or Update:
-     *  ACCOUNT_ID with getAccID given from parameter
-     *  CUSTOMER_ID with getCustID given from parameter
-     *  BALANCE with getBalance given from parameter
+     * ACCOUNT_ID with getAccID given from parameter
+     * CUSTOMER_ID with getCustID given from parameter
+     * BALANCE with getBalance given from parameter
      *
      * @param rowData
      * @throws SQLException
@@ -73,6 +72,7 @@ public class AccDAO implements BankDAO<Account> {
 
     /**
      * This method returns row data of an Account(s) depending on the ACCOUNT_ID column, based on the id parameter:
+     *
      * @param ID
      * @return Row data of an Account from the ACCOUNT_ID column based on the id parameter
      * @throws SQLException
@@ -99,6 +99,7 @@ public class AccDAO implements BankDAO<Account> {
 
     /**
      * This method returns row data of an Account depending on the ACCOUNT_ID column, based on the id parameter:
+     *
      * @param ID
      * @return Row data of an Account from the ACCOUNT_ID column based on the id parameter
      * @throws SQLException
@@ -124,6 +125,7 @@ public class AccDAO implements BankDAO<Account> {
 
     /**
      * This method returns every piece of data from the ACCOUNTS table
+     *
      * @return Every piece of data from the ACCOUNTS table
      * @throws SQLException
      */
@@ -133,8 +135,7 @@ public class AccDAO implements BankDAO<Account> {
         pstmt = conn.prepareStatement(sql);
         rs = pstmt.executeQuery();
 
-        while(rs.next())
-        {
+        while (rs.next()) {
             currentAccount = new Account(rs.getString("ACCOUNT_NAME"),
                     rs.getString("ACCOUNT_TYPE"),
                     rs.getInt("BALANCE"));
@@ -147,6 +148,7 @@ public class AccDAO implements BankDAO<Account> {
 
     /**
      * This method deletes an account on the ACCOUNTS table using its ACCOUNT_ID field
+     *
      * @param ID
      * @throws SQLException
      */
@@ -161,11 +163,12 @@ public class AccDAO implements BankDAO<Account> {
 
     /**
      * This method returns an Account(s) from the ACCOUNTS table
+     *
      * @param firstName customer first name to pull data by
      * @return
      * @throws SQLException
      */
-    public MyArrayList<Account> getAllByFirstName(String firstName) throws SQLException{
+    public MyArrayList<Account> getAllByFirstName(String firstName) throws SQLException {
         accounts.clear();
         sql = "SELECT * " +
                 "FROM ACCOUNTS a " +
@@ -189,11 +192,12 @@ public class AccDAO implements BankDAO<Account> {
 
     /**
      * This method returns an Account(s) from the ACCOUNTS table
+     *
      * @param username username to pull data by
      * @return
      * @throws SQLException
      */
-    public MyArrayList<Account> getAllByUsername(String username) throws SQLException{
+    public MyArrayList<Account> getAllByUsername(String username) throws SQLException {
         accounts.clear();
         sql = "SELECT * " +
                 "FROM ACCOUNTS a " +
@@ -219,8 +223,9 @@ public class AccDAO implements BankDAO<Account> {
 
     /**
      * Method to withdraw funds from an Account
+     *
      * @param amount Amount to withdraw
-     * @param accID Account to store the withdrawn money
+     * @param accID  Account to store the withdrawn money
      * @return
      */
     public boolean withdrawFunds(int amount, int accID) {
@@ -253,8 +258,9 @@ public class AccDAO implements BankDAO<Account> {
 
     /**
      * Method to deposit funds to an Account
+     *
      * @param amount Amount to deposit
-     * @param accID Account to store the deposited money
+     * @param accID  Account to store the deposited money
      * @return
      * @throws SQLException
      */
@@ -269,7 +275,7 @@ public class AccDAO implements BankDAO<Account> {
         pstmt.setInt(1, amount);
         pstmt.setInt(2, accID);
 
-        if(pstmt.executeUpdate() != 0){
+        if (pstmt.executeUpdate() != 0) {
             success = true;
         }
 
@@ -278,14 +284,15 @@ public class AccDAO implements BankDAO<Account> {
 
     /**
      * Called to transfer funds between two accounts
-     * @param amount Amount to be transferred
-     * @param accID Account to deduct the amount from
+     *
+     * @param amount     Amount to be transferred
+     * @param accID      Account to deduct the amount from
      * @param otherAccID Account to add the amount to
      * @return
      */
-    public boolean transferFunds(int amount, int accID, int otherAccID){
+    public boolean transferFunds(int amount, int accID, int otherAccID) {
         boolean success = false;
-        if(withdrawFunds(amount, accID)){
+        if (withdrawFunds(amount, accID)) {
             NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.US);
             try {
                 sql = "UPDATE ACCOUNTS " +
@@ -311,11 +318,11 @@ public class AccDAO implements BankDAO<Account> {
 
     /**
      * Error message for a null Account
+     *
      * @param accID The account id that is not valid
      * @return
      */
-    private String NullAccount(int accID)
-    {
+    private String NullAccount(int accID) {
         return "Account with ID : " + accID + " does not exist.";
     }
 }

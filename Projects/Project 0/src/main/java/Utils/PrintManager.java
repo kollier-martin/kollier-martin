@@ -1,9 +1,19 @@
 package Utils;
 
-import Menu.*;
+import Menu.AccountBalance;
+import Menu.AccountCreation;
+import Menu.CustomerCreation;
+import Menu.DepositFunds;
+import Menu.LoggedIn;
+import Menu.Login;
+import Menu.MainMenu;
+import Menu.PrintView;
+import Menu.TransactionHistory;
+import Menu.TransferFunds;
+import Menu.WithdrawFunds;
+import MyCollections.MyArrayList;
 import Models.Account;
 import Models.Customer;
-import MyCollections.MyArrayList;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -11,17 +21,14 @@ import java.util.Scanner;
 
 public class PrintManager {
     private static PrintManager pm;
-
+    public MyArrayList<PrintView> menuList;
     private Connection conn;
     private Scanner scn;
     private Customer currentCustomer;
     private Account currentAccount;
     private PrintView nextMenu;
 
-    public MyArrayList<PrintView> menuList;
-
-    public PrintManager()
-    {
+    public PrintManager() {
         pm = this;
 
         this.scn = new Scanner(System.in);
@@ -41,10 +48,8 @@ public class PrintManager {
         menuList.add(new MainMenu(scn));
     }
 
-    public static PrintManager getPM()
-    {
-        if (pm == null)
-        {
+    public static PrintManager getPM() {
+        if (pm == null) {
             pm = new PrintManager();
         }
 
@@ -53,25 +58,26 @@ public class PrintManager {
 
     /**
      * Navigates to a specific menu dependent on the destination parameter
+     *
      * @param destination
      */
-    public void navigate(String destination){
-        for (PrintView menu : menuList){
+    public void navigate(String destination) {
+        for (PrintView menu : menuList) {
             if (menu.getViewerType().toString().equals(destination)) {
                 nextMenu = menu;
             }
         }
     }
 
-    public void printThis() throws SQLException{
+    public void printThis() throws SQLException {
         nextMenu.printMenu();
     }
 
-    public Customer getCurrentCustomer(){
+    public Customer getCurrentCustomer() {
         return currentCustomer;
     }
 
-    public void setCurrentCustomer(Customer c){
+    public void setCurrentCustomer(Customer c) {
         this.currentCustomer = c;
     }
 

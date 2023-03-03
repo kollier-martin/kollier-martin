@@ -9,7 +9,6 @@ public class Junction {
     /**
      * Non-Parameterized Constructor.
      * Sets values to the current customer's bank account and the current customer
-     *
      */
     public Junction() {
         this.ACCOUNT_ID = pm.getCurrentAccount().getAccID();
@@ -20,7 +19,7 @@ public class Junction {
      * Parameterized Constructor
      *
      * @param JUNCTION_ID is set from fetching DB data
-     * @param ACCOUNT_ID is set from fetching DB data
+     * @param ACCOUNT_ID  is set from fetching DB data
      * @param CUSTOMER_ID is set from fetching DB data
      */
     public Junction(int JUNCTION_ID, int ACCOUNT_ID, int CUSTOMER_ID) {
@@ -65,9 +64,9 @@ public class Junction {
         this.CUSTOMER_ID = CUSTOMER_ID;
     }
 
-    public String toString(){
+    public String toString() {
         return "Junction ID: \n" + getJunctionID() +
-        "Account ID: \n" + getAccountID() +
-        "Customer ID: \n" + getCustomerID();
+                "Account ID: \n" + getAccountID() +
+                "Customer ID: \n" + getCustomerID();
     }
 }

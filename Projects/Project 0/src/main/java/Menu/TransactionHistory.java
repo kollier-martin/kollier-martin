@@ -1,15 +1,14 @@
 package Menu;
 
 import DAOs.TransactionDAO;
-import Models.Transaction;
 import Utils.ConnectionManager;
 
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class TransactionHistory extends PrintView{
+public class TransactionHistory extends PrintView {
 
-    public TransactionHistory(Scanner scn){
+    public TransactionHistory(Scanner scn) {
         super(TransactionHistory.class, scn);
     }
 

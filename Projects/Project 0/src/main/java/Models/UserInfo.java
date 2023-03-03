@@ -6,6 +6,7 @@ public class UserInfo {
 
     /**
      * Parametrized Constructor for UserInfo
+     *
      * @param USERNAME
      * @param PASSWORD
      */
@@ -38,7 +39,7 @@ public class UserInfo {
         this.USER_ID = USER_ID;
     }
 
-    public String toString(){
+    public String toString() {
         return getUSERNAME() + " " +
                 getPASSWORD() + " " +
                 getUserID();

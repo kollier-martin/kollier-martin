@@ -4,13 +4,11 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class LoggedIn extends PrintView {
-    public LoggedIn(Scanner scn)
-    {
+    public LoggedIn(Scanner scn) {
         super(LoggedIn.class, scn);
     }
 
-    public void printMenu() throws SQLException
-    {
+    public void printMenu() throws SQLException {
         boolean isLoggedIn = true;
 
         while (isLoggedIn) {
@@ -61,7 +59,8 @@ public class LoggedIn extends PrintView {
                 case "q":
                 case "Q":
                     System.out.println("Successfully logged out!\n");
-                    pm.setCurrentCustomer(null); pm.setCurrentAccount(null);
+                    pm.setCurrentCustomer(null);
+                    pm.setCurrentAccount(null);
                     pm.navigate("class Menu.MainMenu");
                     isLoggedIn = false;
                     break;

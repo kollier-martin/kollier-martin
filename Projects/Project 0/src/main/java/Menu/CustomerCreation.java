@@ -1,6 +1,9 @@
 package Menu;
 
-import DAOs.*;
+import DAOs.AccDAO;
+import DAOs.CusDAO;
+import DAOs.JunctionDAO;
+import DAOs.UserDAO;
 import Models.Account;
 import Models.Customer;
 import Models.Junction;
@@ -29,7 +32,8 @@ public class CustomerCreation extends PrintView {
         String email, firstName, lastName, newUserName, newPassword;
 
         PrintManager pm = PrintManager.getPM();
-        Customer newCustomer = null; Account newAccount = null;
+        Customer newCustomer = null;
+        Account newAccount = null;
 
         System.out.println("============= ACCOUNT CREATION ===============");
 
@@ -49,8 +53,7 @@ public class CustomerCreation extends PrintView {
             System.out.print("Enter your password: ");
             newPassword = scn.nextLine();
 
-            if (cc.isValid(newUserName, newPassword))
-            {
+            if (cc.isValid(newUserName, newPassword)) {
                 // DAO saves called on successful account creation
                 // All saves are in order to prevent foreign key constraint failures
                 try {

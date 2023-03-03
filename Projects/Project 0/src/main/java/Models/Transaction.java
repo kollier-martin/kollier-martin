@@ -9,6 +9,7 @@ public class Transaction {
 
     /**
      * Parameterized Constructor for Transaction Data
+     *
      * @param OTHER_ACC
      * @param ACCOUNT_ID
      * @param DATE
@@ -16,7 +17,7 @@ public class Transaction {
      * @param NEW_BALANCE
      * @param DESCRIPTION
      */
-    public Transaction(int OTHER_ACC, int ACCOUNT_ID, Date DATE, int STARTING_BALANCE, int NEW_BALANCE, String DESCRIPTION){
+    public Transaction(int OTHER_ACC, int ACCOUNT_ID, Date DATE, int STARTING_BALANCE, int NEW_BALANCE, String DESCRIPTION) {
         this.OTHER_ACC = OTHER_ACC;
         this.ACCOUNT_ID = ACCOUNT_ID;
         this.DATE = DATE;
@@ -73,7 +74,7 @@ public class Transaction {
         this.DESCRIPTION = DESCRIPTION;
     }
 
-    public String toString(){
+    public String toString() {
         return (getDATE() + " " + getACCOUNT_ID() + " | " + getDESCRIPTION());
     }
 }

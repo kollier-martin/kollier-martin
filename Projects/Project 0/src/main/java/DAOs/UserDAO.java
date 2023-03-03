@@ -1,15 +1,14 @@
 package DAOs;
 
-import Models.UserInfo;
 import MyCollections.MyArrayList;
-import Utils.PrintManager;
+import Models.UserInfo;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserDAO implements BankDAO<UserInfo>{
+public class UserDAO implements BankDAO<UserInfo> {
     /**
      * All SQL parameters used to run and store a query within the program
      */
@@ -29,13 +28,14 @@ public class UserDAO implements BankDAO<UserInfo>{
     private UserInfo currentUser = null;
 
 
-    public UserDAO(Connection conn){
+    public UserDAO(Connection conn) {
         userInfoArrayList = new MyArrayList<>();
         this.conn = conn;
     }
 
     /**
      * Saves a new data entry to the UserInfo table
+     *
      * @param row UserInfo Object to pull data from
      * @throws SQLException
      */
@@ -50,6 +50,7 @@ public class UserDAO implements BankDAO<UserInfo>{
 
     /**
      * Gets all UserInfo entries in table
+     *
      * @return ArrayList of UserInfo objects
      * @throws SQLException
      */
@@ -66,7 +67,7 @@ public class UserDAO implements BankDAO<UserInfo>{
                 currentUser.setUserID(rs.getInt("USER_ID"));
                 userInfoArrayList.add(currentUser);
             }
-        } catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println("Incorrect table name. Can not fetch data from database.");
         }
 
@@ -75,6 +76,7 @@ public class UserDAO implements BankDAO<UserInfo>{
 
     /**
      * Delete UserInfo based on CUSTOMER_ID
+     *
      * @param ID CUSTOMER_ID
      * @throws SQLException
      */
@@ -92,10 +94,11 @@ public class UserDAO implements BankDAO<UserInfo>{
 
     /**
      * Delete UserInfo based on USERNAME
+     *
      * @param username USERNAME
      * @throws SQLException
      */
-    public void deleteByUsername(String username) throws SQLException{
+    public void deleteByUsername(String username) throws SQLException {
         sql = "ALTER TABLE CUSTOMERS " +
                 "DROP CONSTRAINT IF EXISTS CJUNC_FK " +
                 "DROP CONSTRAINT IF EXISTS C_UID";
@@ -111,6 +114,7 @@ public class UserDAO implements BankDAO<UserInfo>{
 
     /**
      * Pulls an ArrayList of UserInfo, but there will only be one element every time
+     *
      * @param ID CUSTOMER_ID
      * @return MyArrayList of UserInfo data
      * @throws SQLException
@@ -135,7 +139,7 @@ public class UserDAO implements BankDAO<UserInfo>{
 
             userInfoArrayList.add(temp);
 
-        } catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println("Table is not properly formatted or is invalid. Can not fetch data.");
         }
 

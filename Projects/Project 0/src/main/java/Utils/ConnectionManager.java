@@ -7,11 +7,12 @@ package Utils;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Properties;
 
-public class ConnectionManager
-{
+public class ConnectionManager {
     public static Connection conn;
     private static String myDBProp = "src/main/resources/db_properties.properties";
 
@@ -19,8 +20,7 @@ public class ConnectionManager
 
     }
 
-    public static void getConn()
-    {
+    public static void getConn() {
         try {
             if (conn == null) {
                 Properties prop = new Properties();
@@ -37,7 +37,7 @@ public class ConnectionManager
 
                 conn = DriverManager.getConnection(connString);
             }
-        } catch (SQLException | IOException e){
+        } catch (SQLException | IOException e) {
             System.out.println("Connection to database can not be established!\n" + e + "\nShutting down.");
             System.exit(0);
         }
