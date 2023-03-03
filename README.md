@@ -8,27 +8,27 @@ Email: kollierm@yahoo.com
 <div>
   <a href="https://www.java.com/en/">
     <img src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/512/java-icon.png" width="50" height="50">
-  </a> <br />
+  </a>
 
   <a href="https://spring.io">
     <img src="https://www.svgrepo.com/show/376350/spring.svg" width="50" height="50">
-  </a> <br />
+  </a>
 
   <a href="https://hibernate.org">
     <img src="https://icon-library.com/images/hibernate-icon/hibernate-icon-0.jpg" width="50" height="50"> <br />
-  </a> <br />
+  </a>
 
   <a href="https://reactjs.org">
     <img src="https://cdn1.iconfinder.com/data/icons/soleicons-solid-vol-1/64/reactjs_javascript_library_atom_atomic_react-512.png" width="50" height="50">
-  </a> <br />
+  </a>
 
   <a href="https://angular.io">
     <img src="https://brandslogos.com/wp-content/uploads/images/large/angular-icon-logo.png" width="50" height="50">
-  </a> <br />
+  </a>
 
   <a href="https://www.mysql.com">
-    <img src="https://icons.veryicon.com/png/o/system/inspur-cloud-icon/rds-mysql.png" width="50" height="50"> 
-  </a> <br />
+    <img src="https://icons.veryicon.com/png/o/system/inspur-cloud-icon/rds-mysql.png" width="50" height="50"> <br />
+  </a>
 <div />
 
 ### Social Networks
@@ -42,7 +42,7 @@ Email: kollierm@yahoo.com
 
 ### Project Experience
 *[March 2022 - March 2023]*     
-Commercial Experience Layer (AMEX)    
+**Commercial Experience Layer (AMEX)**    
 &nbsp;  • Developed reactive APIs, from the ground up, involving B2B operations for client consumption. These APIs were used to store, process, and manipulate client data.   
 &nbsp;  • Incorporated GitHub as project version control    
 &nbsp;  • Utilized JIRA for sprint planning and story updates   
