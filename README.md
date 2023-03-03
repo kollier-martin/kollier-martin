@@ -13,7 +13,14 @@ class Greeting {
 }
 ```
 
-Apparently I have two last names :laughing:. Kollier is pronounced (Call-Yer) and the pronunciation with Martin is a given. I am a Full-Stack developer with around 2 years of experience. I mostly handle project logic pertaining to anything Java related, but I also have a bit of experience in front-end development with Angular/React. The reason I am in this industry is because I love to code. In my spare time, I will practice new languages, work on my knowledge of fundamentals, and take swings at problems that involve complex algorithms (that may never be used in normal environments). My hobbies are: traveling, gaming, reading, 
+Apparently I have two last names :laughing:. Kollier is pronounced (Call-Yer) and the pronunciation with Martin is a given. I am a Full-Stack developer with around 2 years of experience. I mostly handle project logic pertaining to anything Java related, but I also have a bit of experience in front-end development with Angular/React. The reason I am in this industry is because I love to code. In my spare time, I will practice new languages, work on my knowledge of fundamentals, and take swings at problems that involve complex algorithms (that may never be used in normal environments). My hobbies are: traveling, gaming, and reading. 
+
+### • Currently Learning •   
+JBPM    
+J2EE    
+C Suite (C, C++, C#)    
+Scala   
+JS    
 
 ### • Contact Information •   
 Email: kollierm@yahoo.com   
