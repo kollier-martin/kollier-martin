@@ -1,13 +1,12 @@
 package Menu;
 
-import java.sql.SQLException;
-import java.util.Scanner;
-
 import DAOs.AccDAO;
 import DAOs.CusDAO;
-import Models.Account;
 import Utils.ConnectionManager;
 import Utils.CredentialChecker;
+
+import java.sql.SQLException;
+import java.util.Scanner;
 
 public class Login extends PrintView {
     public Login(Scanner scn) {
@@ -42,7 +41,7 @@ public class Login extends PrintView {
                 System.out.print("-> ");
                 String input = scn.nextLine();
 
-                switch (input){
+                switch (input) {
                     case "y":
                     case "Y":
                         break;

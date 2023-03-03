@@ -12,40 +12,32 @@ import java.util.Iterator;
 import java.util.Spliterator;
 import java.util.function.Consumer;
 
-public class MyArrayList<T> implements MyListInterface<T>, Iterable<T>{
-    // Initial capacity and list length expansion variable
-    private final int INIT_CAPACITY = 5;
-
-    private int size;
-    private int growthCount = 0;
-
-    private Object[] theList;
-
+public class MyArrayList<T> implements MyListInterface<T>, Iterable<T> {
     /**
      * This empty array instance has meaning:
      * The EMPTY_LIST is used as a reference and an initializer
      */
     private static final Object[] EMPTY_LIST = {};
+    // Initial capacity and list length expansion variable
+    private final int INIT_CAPACITY = 5;
+    private int size;
+    private int growthCount = 0;
+    private Object[] theList;
 
-    public MyArrayList()
-    {
+    public MyArrayList() {
         this.theList = EMPTY_LIST;
     }
 
     public MyArrayList(int arrayCapacity) {
-        if (arrayCapacity > 0)
-        {
+        if (arrayCapacity > 0) {
             // Initialize the list with a type Object with the given capacity
             theList = new Object[arrayCapacity];
-        }
-        else if (arrayCapacity == 0)
-        {
+        } else if (arrayCapacity == 0) {
             // Else if the given capacity is 0, turn theList into a list of 5 elements
             theList = EMPTY_LIST;
-        } else
-        {
+        } else {
             // Else throw exception for not putting a valid integer
-            throw new IllegalArgumentException("Silly human. This capacity isn't a whole number: "+
+            throw new IllegalArgumentException("Silly human. This capacity isn't a whole number: " +
                     arrayCapacity);
         }
     }
@@ -56,7 +48,7 @@ public class MyArrayList<T> implements MyListInterface<T>, Iterable<T>{
             if (theList == EMPTY_LIST || size < theList.length) {
                 grow();
             }
-        }catch (IndexOutOfBoundsException e){
+        } catch (IndexOutOfBoundsException e) {
             e.printStackTrace();
         }
 
@@ -66,12 +58,9 @@ public class MyArrayList<T> implements MyListInterface<T>, Iterable<T>{
 
     @Override
     public void add(T t, int index) {
-        if (index >= size)
-        {
+        if (index >= size) {
             throw new IndexOutOfBoundsException("Index: " + index + " out of bounds.");
-        }
-        else
-        {
+        } else {
             System.arraycopy(theList, index, theList, index + 1, size - index);
             theList[size++] = t;
         }
@@ -107,8 +96,7 @@ public class MyArrayList<T> implements MyListInterface<T>, Iterable<T>{
              *  length − This is the number of array elements to be copied.
              */
             System.arraycopy(theList, index + 1, theList, index, numMoved);
-        }
-        else {
+        } else {
             throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds");
         }
 
@@ -119,8 +107,7 @@ public class MyArrayList<T> implements MyListInterface<T>, Iterable<T>{
 
     @Override
     public void clear() {
-        for (int i = 0; i < size; i++)
-        {
+        for (int i = 0; i < size; i++) {
             theList[i] = null;
         }
 
@@ -141,7 +128,7 @@ public class MyArrayList<T> implements MyListInterface<T>, Iterable<T>{
     public boolean contains(T t) {
         boolean doesContain = false;
 
-        if(theList != null) {
+        if (theList != null) {
             for (Object obj : theList) {
                 if (obj.equals(t)) {
                     doesContain = true;
@@ -170,19 +157,18 @@ public class MyArrayList<T> implements MyListInterface<T>, Iterable<T>{
     @Override
     public void trimToSize() {
         int oldSize = theList.length;
-        if (size < oldSize)
-        {
+        if (size < oldSize) {
             Arrays.copyOf(theList, size);
         }
     }
 
     /**
      * Checks to make sure the array is not out of bounds
+     *
      * @param index
      */
-    private void OutOfBoundsCheck(int index) throws IndexOutOfBoundsException{
-        if (index >= size || index < 0)
-        {
+    private void OutOfBoundsCheck(int index) throws IndexOutOfBoundsException {
+        if (index >= size || index < 0) {
             throw new IndexOutOfBoundsException("Index: " + index + " out of bounds.");
         }
     }

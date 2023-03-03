@@ -8,16 +8,15 @@
 
 package DAOs;
 
-import Models.Customer;
 import MyCollections.MyArrayList;
+import Models.Customer;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
-public class CusDAO implements BankDAO<Customer>{
+public class CusDAO implements BankDAO<Customer> {
     /**
      * Used to store a list of customers in function getAllCustomers()
      */
@@ -49,11 +48,11 @@ public class CusDAO implements BankDAO<Customer>{
 
     /**
      * This method simply creates or updates data for an account in the Accounts table
-     *
-     *  CUSTOMER_ID with getCusID given from parameter
-     *  EMAIL with getEMAIL given from parameter
-     *  LAST_NAME with getLastName given from parameter
-     *  FIRST_NAME with getFirstName given from parameter
+     * <p>
+     * CUSTOMER_ID with getCusID given from parameter
+     * EMAIL with getEMAIL given from parameter
+     * LAST_NAME with getLastName given from parameter
+     * FIRST_NAME with getFirstName given from parameter
      *
      * @param rowData Customer object to receive data from
      * @throws SQLException
@@ -71,6 +70,7 @@ public class CusDAO implements BankDAO<Customer>{
 
     /**
      * This method returns row data of a Customer depending on the CUSTOMER_ID column, based on the id parameter
+     *
      * @param ID
      * @return A list of row data of a Customer from the CUSTOMER_ID column based on the id parameter
      * @throws SQLException
@@ -84,7 +84,7 @@ public class CusDAO implements BankDAO<Customer>{
         pstmt.setInt(1, ID);
         rs = pstmt.executeQuery();
 
-        while(rs.next()) {
+        while (rs.next()) {
             currentCustomer = new Customer(rs.getInt("CUSTOMER_ID"),
                     rs.getString("EMAIL"),
                     rs.getString("LAST_NAME"),
@@ -98,11 +98,12 @@ public class CusDAO implements BankDAO<Customer>{
 
     /**
      * This method returns every piece of data from the CUSTOMERS table
+     *
      * @return Every piece of data from the CUSTOMERS table
      * @throws SQLException
      */
     @Override
-    public MyArrayList<Customer> getAll(){
+    public MyArrayList<Customer> getAll() {
         try {
             sql = "SELECT * FROM CUSTOMERS";
             pstmt = conn.prepareStatement(sql);
@@ -110,11 +111,11 @@ public class CusDAO implements BankDAO<Customer>{
 
             while (rs.next()) {
                 currentCustomer = new Customer(rs.getInt("CUSTOMER_ID"),
-                        rs.getString("EMAIL"),  rs.getString("LAST_NAME"),
+                        rs.getString("EMAIL"), rs.getString("LAST_NAME"),
                         rs.getString("FIRST_NAME"));
                 customers.add(currentCustomer);
             }
-        } catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println("Incorrect table name. Can not fetch data from database.");
         }
 
@@ -123,6 +124,7 @@ public class CusDAO implements BankDAO<Customer>{
 
     /**
      * This method deletes a Customer on the CUSTOMERS table using its CUSTOMER_ID field
+     *
      * @param ID
      * @throws SQLException
      */
@@ -138,11 +140,12 @@ public class CusDAO implements BankDAO<Customer>{
 
     /**
      * This method returns row data of a Customer depending on the CUSTOMER_ID column, based on the id parameter
+     *
      * @param username
      * @return Row data of a Customer from the username column based on the id parameter
      * @throws SQLException
      */
-    public Customer getByName(String username) throws SQLException{
+    public Customer getByName(String username) throws SQLException {
         sql = "SELECT * " +
                 "FROM CUSTOMERS c " +
                 "JOIN USERINFO u ON c.USER_ID = u.USER_ID " +
@@ -151,7 +154,7 @@ public class CusDAO implements BankDAO<Customer>{
         pstmt.setString(1, username);
         rs = pstmt.executeQuery();
 
-        while(rs.next()) {
+        while (rs.next()) {
             currentCustomer = new Customer(rs.getInt("CUSTOMER_ID"),
                     rs.getString("EMAIL"),
                     rs.getString("LAST_NAME"),

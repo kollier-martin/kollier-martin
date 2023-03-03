@@ -2,9 +2,9 @@ package Menu;
 
 import DAOs.AccDAO;
 import DAOs.TransactionDAO;
+import MyCollections.MyArrayList;
 import Models.Account;
 import Models.Transaction;
-import MyCollections.MyArrayList;
 import Utils.ConnectionManager;
 
 import java.sql.Date;
@@ -13,9 +13,9 @@ import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class TransferFunds extends PrintView{
+public class TransferFunds extends PrintView {
 
-    public TransferFunds(Scanner scn){
+    public TransferFunds(Scanner scn) {
         super(TransferFunds.class, scn);
     }
 
@@ -37,7 +37,7 @@ public class TransferFunds extends PrintView{
         System.out.printf("\n============= %s's Transfer Page ===============", pm.getCurrentCustomer().getFirstName());
 
 
-        while(isTransferring) {
+        while (isTransferring) {
             System.out.println("\nBalance for Account(s):");
             try {
                 accounts = accDAO.getAllByFirstName(pm.getCurrentCustomer().getFirstName());
@@ -58,13 +58,15 @@ public class TransferFunds extends PrintView{
                 System.out.print("Input any Account ID from within the database where you would like to transfer: ");
                 sendToID = scn.nextLine();
 
-                accIDI = Integer.parseInt(accID); sendToIDI = Integer.parseInt(sendToID); amountI = Integer.parseInt(amount);
+                accIDI = Integer.parseInt(accID);
+                sendToIDI = Integer.parseInt(sendToID);
+                amountI = Integer.parseInt(amount);
 
                 int transactionOB = accDAO.getAccByID(accIDI).getBalance();
                 int transactionNB = accDAO.getAccByID(accIDI).getBalance() + amountI;
 
                 // Transfer Funds
-                if (accDAO.transferFunds(amountI, accIDI, sendToIDI)){
+                if (accDAO.transferFunds(amountI, accIDI, sendToIDI)) {
                     // Store Transaction
                     tDAO.save(new Transaction(sendToIDI,
                             accIDI,
@@ -77,8 +79,7 @@ public class TransferFunds extends PrintView{
 
                     pm.navigate("class Menu.LoggedIn");
                     isTransferring = false;
-                }
-                else{
+                } else {
                     pm.navigate("class Menu.LoggedIn");
                     isTransferring = false;
                 }

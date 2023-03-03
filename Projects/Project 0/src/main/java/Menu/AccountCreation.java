@@ -29,7 +29,6 @@ public class AccountCreation extends PrintView {
 
             if (!(accountType.equalsIgnoreCase("Checking")) && !(accountType.equalsIgnoreCase("Savings"))) {
                 System.out.println(accountType + " is an valid option. Try again.");
-                isCreatingAccount = true;
             } else {
                 newAccount.setAccType(accountType);
                 newAccount.setBalance(0);

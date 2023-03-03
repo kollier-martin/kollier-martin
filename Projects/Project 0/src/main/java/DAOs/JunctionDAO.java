@@ -1,7 +1,7 @@
 package DAOs;
 
-import Models.Junction;
 import MyCollections.MyArrayList;
+import Models.Junction;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -41,8 +41,8 @@ public class JunctionDAO implements BankDAO<Junction> {
     /**
      * This method simply creates or updates data for a Junction in the AC_JUNCTION table
      * Either Create or Update:
-     *  ACCOUNT_ID with getAccountID() called on parameter
-     *  CUSTOMER_ID with getCustomerID called on parameter
+     * ACCOUNT_ID with getAccountID() called on parameter
+     * CUSTOMER_ID with getCustomerID called on parameter
      *
      * @param rowData
      * @throws SQLException
@@ -58,6 +58,7 @@ public class JunctionDAO implements BankDAO<Junction> {
 
     /**
      * This method returns row data of a Junction depending on the CUSTOMER_ID column, based on the id parameter
+     *
      * @param ID Junction_ID
      * @return Row data of a Junction from the CUSTOMER_ID column based on the id parameter
      * @throws SQLException
@@ -84,11 +85,12 @@ public class JunctionDAO implements BankDAO<Junction> {
 
     /**
      * This method returns every piece of data from the AC_JUNCTION table
+     *
      * @return Every piece of data from the AC_JUNCTION table
      * @throws SQLException
      */
     @Override
-    public MyArrayList<Junction> getAll(){
+    public MyArrayList<Junction> getAll() {
         try {
             sql = "SELECT * FROM AC_JUNCTION";
             pstmt = conn.prepareStatement(sql);
@@ -96,11 +98,11 @@ public class JunctionDAO implements BankDAO<Junction> {
 
             while (rs.next()) {
                 currentJunction = new Junction(rs.getInt("JUNCTION_ID"),
-                rs.getInt("ACCOUNT_ID"),
-                rs.getInt("CUSTOMER_ID"));
+                        rs.getInt("ACCOUNT_ID"),
+                        rs.getInt("CUSTOMER_ID"));
                 junctions.add(currentJunction);
             }
-        } catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println("Incorrect table name. Can not fetch data from database.");
         }
 
@@ -109,6 +111,7 @@ public class JunctionDAO implements BankDAO<Junction> {
 
     /**
      * This method deletes data on the AC_JUNCTION table using its JUNCTION_ID field
+     *
      * @param JUNCTION_ID JUNCTION_ID to delete by
      * @throws SQLException
      */

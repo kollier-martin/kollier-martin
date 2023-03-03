@@ -1,12 +1,14 @@
 package DAOs;
 
-import Models.Transaction;
 import MyCollections.MyArrayList;
+import Models.Transaction;
 
-import java.sql.*;
-import java.util.Arrays;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-public class TransactionDAO implements BankDAO<Transaction>{
+public class TransactionDAO implements BankDAO<Transaction> {
     /**
      * All SQL parameters used to run and store a query within the program
      */
@@ -22,13 +24,14 @@ public class TransactionDAO implements BankDAO<Transaction>{
 
     private Transaction currentTransaction;
 
-    public TransactionDAO(Connection conn){
+    public TransactionDAO(Connection conn) {
         transactions = new MyArrayList<>();
         this.conn = conn;
     }
 
     /**
      * Saves Transaction data to DB Table
+     *
      * @param rowData Transaction object that contains the date to populate the table
      * @throws SQLException
      */
@@ -48,6 +51,7 @@ public class TransactionDAO implements BankDAO<Transaction>{
 
     /**
      * Pull all Transaction data from the DB
+     *
      * @return ArrayList of transaction objects
      * @throws SQLException
      */
@@ -57,8 +61,7 @@ public class TransactionDAO implements BankDAO<Transaction>{
         pstmt = conn.prepareStatement(sql);
         rs = pstmt.executeQuery();
 
-        while(rs.next())
-        {
+        while (rs.next()) {
             Transaction currentTransaction = new Transaction(rs.getInt("OTHER_ACC"),
                     rs.getInt("ACCOUNT_ID"),
                     rs.getDate("DATE"),
@@ -74,18 +77,19 @@ public class TransactionDAO implements BankDAO<Transaction>{
      * Empty override as this will not be necessary
      */
     @Override
-    public void deleteByID(int ID) throws SQLException{
+    public void deleteByID(int ID) throws SQLException {
 
     }
 
     /**
      * Receives all Transaction data dependent on the parameter ID
+     *
      * @param ID The Account ID to go by
      * @return An ArrayList of Transaction objects
      * @throws SQLException
      */
     @Override
-    public MyArrayList<Transaction> getByID(int ID) throws SQLException{
+    public MyArrayList<Transaction> getByID(int ID) throws SQLException {
         try {
             sql = "SELECT * FROM TRANSACTIONS t " +
                     "JOIN AC_JUNCTION aj ON aj.ACCOUNT_ID = t.ACCOUNT_ID " +
@@ -104,7 +108,7 @@ public class TransactionDAO implements BankDAO<Transaction>{
                         rs.getString("DESCRIPTION"));
                 transactions.add(currentTransaction);
             }
-        } catch (SQLException e){
+        } catch (SQLException e) {
             System.out.println("Incorrect table name. Can not fetch data from database.");
         }
 
@@ -113,11 +117,12 @@ public class TransactionDAO implements BankDAO<Transaction>{
 
     /**
      * Receives all Transaction data dependent on the parameter ID and prints them
+     *
      * @param ID The Customer ID to go by
      * @throws SQLException
      */
-    public void getAllByCID(int ID) throws SQLException{
-        try{
+    public void getAllByCID(int ID) throws SQLException {
+        try {
             sql = "SELECT * FROM TRANSACTIONS t " +
                     "JOIN AC_JUNCTION aj ON aj.ACCOUNT_ID = t.ACCOUNT_ID " +
                     "JOIN CUSTOMERS c ON c.CUSTOMER_ID = aj.CUSTOMER_ID " +
@@ -137,7 +142,7 @@ public class TransactionDAO implements BankDAO<Transaction>{
                 System.out.println(transactions);
                 transactions.clear();
             }
-        } catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

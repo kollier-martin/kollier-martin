@@ -2,9 +2,9 @@ package Menu;
 
 import DAOs.AccDAO;
 import DAOs.TransactionDAO;
+import MyCollections.MyArrayList;
 import Models.Account;
 import Models.Transaction;
-import MyCollections.MyArrayList;
 import Utils.ConnectionManager;
 
 import java.sql.Date;
@@ -52,18 +52,18 @@ public class DepositFunds extends PrintView {
         int accountIDInt = Integer.parseInt(accountID);
 
         // Input is not a valid account number
-        if (!accountIDs.contains(accountIDInt)){
+        if (!accountIDs.contains(accountIDInt)) {
             System.out.println("This is not a valid account number. Try again.");
         } else {
             System.out.print("Enter deposit amount: ");
-            String input = scn.nextLine(); amount = Integer.parseInt(input);
+            String input = scn.nextLine();
+            amount = Integer.parseInt(input);
 
             startingBalance = accDAO.getAccByID(accountIDInt).getBalance();
 
-            if (amount < 0){
+            if (amount < 0) {
                 System.out.println("Amount " + amount + " is not a positive value.");
-            }
-            else {
+            } else {
                 if (accDAO.depositFunds(amount, accountIDInt)) {
                     endingBalance = accDAO.getAccByID(accountIDInt).getBalance();
 

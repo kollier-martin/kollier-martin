@@ -3,8 +3,7 @@ package Models;
 import java.io.PrintStream;
 import java.util.Random;
 
-public class Account
-{
+public class Account {
     private int ACCOUNT_ID, BALANCE = 0;
     private String ACCOUNT_TYPE, ACCOUNT_NAME = "";
     private Random rand = new Random();
@@ -20,8 +19,9 @@ public class Account
 
     /**
      * Used when ACCOUNT_NAME is not set
+     *
      * @param ACCOUNT_TYPE Checking or Savings
-     * @param BALANCE Account balance
+     * @param BALANCE      Account balance
      */
     public Account(String ACCOUNT_TYPE, int BALANCE) {
         this.ACCOUNT_ID = rand.nextInt(10000);
@@ -31,9 +31,10 @@ public class Account
 
     /**
      * Used when ACCOUNT_NAME is set
+     *
      * @param ACCOUNT_NAME Account nickname
      * @param ACCOUNT_TYPE Checking or Savings
-     * @param BALANCE Account balance
+     * @param BALANCE      Account balance
      */
     public Account(String ACCOUNT_NAME, String ACCOUNT_TYPE, int BALANCE) {
         this.ACCOUNT_NAME = ACCOUNT_NAME;
@@ -43,11 +44,10 @@ public class Account
     }
 
     /**
-     *
      * @param ACCOUNT_NAME Account nickname
-     * @param ACCOUNT_ID Account ID
+     * @param ACCOUNT_ID   Account ID
      * @param ACCOUNT_TYPE Checking or Savings
-     * @param BALANCE Account balance
+     * @param BALANCE      Account balance
      */
     public Account(String ACCOUNT_NAME, int ACCOUNT_ID, String ACCOUNT_TYPE, int BALANCE) {
         this.ACCOUNT_ID = ACCOUNT_ID;
@@ -68,7 +68,9 @@ public class Account
         return ACCOUNT_TYPE;
     }
 
-    public void setAccType(String ACCOUNT_TYPE) { this.ACCOUNT_TYPE = ACCOUNT_TYPE; }
+    public void setAccType(String ACCOUNT_TYPE) {
+        this.ACCOUNT_TYPE = ACCOUNT_TYPE;
+    }
 
     public int getAccID() {
         return ACCOUNT_ID;
@@ -86,7 +88,7 @@ public class Account
         this.BALANCE = BALANCE;
     }
 
-    public String toString(){
+    public String toString() {
         PrintStream str = System.out.printf("'%s', {%s}, %d : [$%d]", getAccountName(),
                 getAccType(), getAccID(), getBalance());
 
