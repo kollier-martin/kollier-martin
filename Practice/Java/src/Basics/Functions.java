@@ -9,13 +9,11 @@ import java.util.function.Supplier;
 
 public class Functions {
     public static void main(String[] args) {
-        List<Paper> paperList = new ArrayList<>() {
-            {
-                add(new Paper(Paper.Type.NOTEBOOK, "Wide Rule", 0.05F));
-                add(new Paper(Paper.Type.NOTEBOOK, "College Rule", 0.10F));
-                add(new Paper(Paper.Type.CONSTRUCTION, "Blank", 0.00F));
-            }
-        };
+        List<Paper> paperList = new ArrayList<>();
+
+        paperList.add(new Paper(Paper.Type.NOTEBOOK, "Wide Rule", 0.05F));
+        paperList.add(new Paper(Paper.Type.NOTEBOOK, "College Rule", 0.10F));
+        paperList.add(new Paper(Paper.Type.CONSTRUCTION, "Blank", 0.00F));
 
         //region Supplier
         System.out.println("====== Enter Supplier ======");

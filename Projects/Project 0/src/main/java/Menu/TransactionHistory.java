@@ -1,7 +1,7 @@
 package Menu;
 
-import DAOs.TransactionDAO;
 import Utils.ConnectionManager;
+import dao.TransactionDAO;
 
 import java.sql.SQLException;
 import java.util.Scanner;

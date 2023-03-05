@@ -1,9 +1,9 @@
 package Servlets;
 
 import Logging.MyLogger;
-import Services.UserService;
 import Utils.RequestArgChecker;
 import org.json.JSONObject;
+import services.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

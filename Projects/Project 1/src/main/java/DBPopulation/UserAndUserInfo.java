@@ -3,8 +3,8 @@ package DBPopulation;
 import Logging.MyLogger;
 import Models.User;
 import Models.UserInfo;
-import Services.UserService;
 import org.hibernate.Transaction;
+import services.UserService;
 
 import java.util.Scanner;
 import java.util.UUID;

@@ -11,9 +11,9 @@ import Menu.PrintView;
 import Menu.TransactionHistory;
 import Menu.TransferFunds;
 import Menu.WithdrawFunds;
-import MyCollections.MyArrayList;
 import Models.Account;
 import Models.Customer;
+import MyCollections.MyArrayList;
 
 import java.sql.Connection;
 import java.sql.SQLException;

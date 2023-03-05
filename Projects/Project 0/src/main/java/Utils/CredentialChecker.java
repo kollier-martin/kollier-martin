@@ -1,8 +1,8 @@
 package Utils;
 
-import DAOs.UserDAO;
-import MyCollections.MyArrayList;
 import Models.UserInfo;
+import MyCollections.MyArrayList;
+import dao.UserDAO;
 
 import java.sql.SQLException;
 

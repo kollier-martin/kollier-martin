@@ -3,11 +3,11 @@ package Servlets;
 import Logging.MyLogger;
 import Models.Train;
 import POSTModels.RouteInfo;
-import Services.TrainService;
 import Utils.JWTUtil;
 import Utils.RequestArgChecker;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.JSONObject;
+import services.TrainService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

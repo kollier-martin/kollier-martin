@@ -1,11 +1,11 @@
 package Menu;
 
-import DAOs.AccDAO;
-import DAOs.TransactionDAO;
-import MyCollections.MyArrayList;
 import Models.Account;
 import Models.Transaction;
+import MyCollections.MyArrayList;
 import Utils.ConnectionManager;
+import dao.AccDAO;
+import dao.TransactionDAO;
 
 import java.sql.Date;
 import java.sql.SQLException;

@@ -1,9 +1,9 @@
 package Menu;
 
-import DAOs.AccDAO;
 import Models.Account;
 import MyCollections.MyArrayList;
 import Utils.ConnectionManager;
+import dao.AccDAO;
 
 import java.sql.SQLException;
 import java.text.NumberFormat;

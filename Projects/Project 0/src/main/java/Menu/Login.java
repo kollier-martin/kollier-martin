@@ -1,9 +1,9 @@
 package Menu;
 
-import DAOs.AccDAO;
-import DAOs.CusDAO;
 import Utils.ConnectionManager;
 import Utils.CredentialChecker;
+import dao.AccDAO;
+import dao.CusDAO;
 
 import java.sql.SQLException;
 import java.util.Scanner;

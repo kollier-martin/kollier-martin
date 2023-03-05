@@ -1,6 +1,11 @@
 package Main;
 
-import Assets.*;
+import Assets.Artifact;
+import Assets.Battle;
+import Assets.Gair;
+import Assets.Parser;
+import Assets.Player;
+import Assets.Room;
 import Commands.Command;
 import Commands.CommandList;
 
