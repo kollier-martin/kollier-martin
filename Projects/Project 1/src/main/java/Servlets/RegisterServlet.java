@@ -2,10 +2,10 @@ package Servlets;
 
 import Logging.MyLogger;
 import POSTModels.RegisterInfo;
-import Services.UserService;
 import Utils.JWTUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.JSONObject;
+import services.UserService;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

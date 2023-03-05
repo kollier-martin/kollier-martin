@@ -1,9 +1,5 @@
 package Menu;
 
-import DAOs.AccDAO;
-import DAOs.CusDAO;
-import DAOs.JunctionDAO;
-import DAOs.UserDAO;
 import Models.Account;
 import Models.Customer;
 import Models.Junction;
@@ -11,6 +7,10 @@ import Models.UserInfo;
 import Utils.ConnectionManager;
 import Utils.CredentialChecker;
 import Utils.PrintManager;
+import dao.AccDAO;
+import dao.CusDAO;
+import dao.JunctionDAO;
+import dao.UserDAO;
 
 import java.sql.SQLException;
 import java.util.Scanner;

@@ -2,12 +2,12 @@ package Servlets;
 
 import Logging.MyLogger;
 import POSTModels.NewTicket;
-import Services.TicketService;
-import Services.TrainService;
 import Utils.JWTUtil;
 import Utils.RequestArgChecker;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.JSONObject;
+import services.TicketService;
+import services.TrainService;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

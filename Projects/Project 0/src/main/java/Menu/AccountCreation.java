@@ -1,10 +1,10 @@
 package Menu;
 
-import DAOs.AccDAO;
-import DAOs.JunctionDAO;
 import Models.Account;
 import Models.Junction;
 import Utils.ConnectionManager;
+import dao.AccDAO;
+import dao.JunctionDAO;
 
 import java.sql.SQLException;
 import java.util.Scanner;

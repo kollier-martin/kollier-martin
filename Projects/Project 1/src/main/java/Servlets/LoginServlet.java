@@ -1,10 +1,10 @@
 package Servlets;
 
 import Logging.MyLogger;
-import Services.LoginService;
-import Services.UserService;
 import Utils.JWTUtil;
 import org.json.JSONObject;
+import services.LoginService;
+import services.UserService;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

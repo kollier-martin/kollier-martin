@@ -87,7 +87,7 @@ public class MyArrayList<T> implements MyListInterface<T>, Iterable<T> {
 
         // if numMoved is greater than 0, then the index is in bouds
         if (numMoved > 0) {
-            /**
+            /*
              *  Copies the array, but differently than Arrays.copyOf()
              *  src − This is the source array.
              *  srcPos − This is the starting position in the source array.

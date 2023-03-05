@@ -19,6 +19,7 @@ public class UDPVariables {
     public static final String TIME_OF_CURRENT = "\"{0}\" has been sent for the {1}th in {2}ms.\n";
     public static final String AVERAGE_RECEIVE_TIME = "The average time to send the file \"{0}\" is {1}ms\n";
     public static final String AM_DONE = "I am done.";
+
     private UDPVariables() {
     }
 }

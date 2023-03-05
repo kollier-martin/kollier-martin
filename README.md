@@ -1,4 +1,5 @@
 # Kollier Martin: Full-Stack Developer <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Circle-icons-stack.svg/2048px-Circle-icons-stack.svg.png" width="35" height="35">
+
 ## About Me
 
 ```java
@@ -13,11 +14,19 @@ class Greeting {
 }
 ```
 
-Apparently I have two last names :laughing:. Kollier is pronounced (Call-Yer) and the pronunciation with Martin is a given. I am a Full-Stack developer with around 2 years of experience. I mostly handle project logic pertaining to anything Java related, but I also have a bit of experience in front-end development with Angular/React. The reason I am in this industry is that I love to code. In my spare time, I will practice new languages, work on my knowledge of fundamentals, and take swings at problems that involve complex algorithms (that may never be used in normal environments). My hobbies are: traveling, gaming, and reading.     
+Apparently I have two last names :laughing:. Kollier is pronounced (Call-Yer) and the pronunciation with Martin is a
+given. I am a Full-Stack developer with around 2 years of experience. I mostly handle project logic pertaining to
+anything Java related, but I also have a bit of experience in front-end development with Angular/React. The reason I am
+in this industry is that I love to code. In my spare time, I will practice new languages, work on my knowledge of
+fundamentals, and take swings at problems that involve complex algorithms (that may never be used in normal
+environments). My hobbies are: traveling, gaming, and reading.
 
-This repo contains some practice problem solutions, mini projects used over the years that helped me understand principles, and a few coding challenges. I plan to reiterate challenges that I completed in Java, in the form of the new languages that I learn over time. Thanks for stopping by and enjoy your day! 
+This repo contains some practice problem solutions, mini projects used over the years that helped me understand
+principles, and a few coding challenges. I plan to reiterate challenges that I completed in Java, in the form of the new
+languages that I learn over time. Thanks for stopping by and enjoy your day!
 
 ### • Currently Learning •
+
 JBPM    
 J2EE    
 C Suite (C, C++, C#)    
@@ -25,6 +34,7 @@ Scala
 JS
 
 ### • Contact Information •
+
 Email: kollierm@yahoo.com   
 Work Phone: (Available upon request)
 
@@ -69,11 +79,14 @@ Work Phone: (Available upon request)
 </div>
 
 ### • Project Experience •
+
 *[March 2022 - March 2023]*     
 **Commercial Experience Layer (AMEX)**    
-&nbsp;  • Developed reactive APIs, from the ground up, involving B2B operations for client consumption. These APIs were used to store, process, and manipulate client data.   
-&nbsp;  • Incorporated GitHub as project version control    
-&nbsp;  • Utilized JIRA for sprint planning and story updates   
-&nbsp;  • Utilized Splunk for application analysis. This involved logging, alerts, reports, and API performance (response times and log efficiency)   
-&nbsp;  • Implemented MSA, with gradle and maven for artifact building.   
-&nbsp;  • For CICD, deployments were handled using Jenkins pipelines and monitored through ‘RedHat eCP’   
+&nbsp; • Developed reactive APIs, from the ground up, involving B2B operations for client consumption. These APIs were
+used to store, process, and manipulate client data.   
+&nbsp; • Incorporated GitHub as project version control    
+&nbsp; • Utilized JIRA for sprint planning and story updates   
+&nbsp; • Utilized Splunk for application analysis. This involved logging, alerts, reports, and API performance (response
+times and log efficiency)   
+&nbsp; • Implemented MSA, with gradle and maven for artifact building.   
+&nbsp; • For CICD, deployments were handled using Jenkins pipelines and monitored through ‘RedHat eCP’   
