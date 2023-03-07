@@ -1,4 +1,4 @@
-package CodingChallenges;
+package io.beansprout.CodingChallenges;
 
 import java.text.DateFormatSymbols;
 import java.util.HashMap;

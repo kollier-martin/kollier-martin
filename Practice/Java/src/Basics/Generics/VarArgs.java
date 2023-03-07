@@ -1,4 +1,4 @@
-package Basics.Generics;
+package io.beansprout.Basics.Generics;
 
 /**
  * VarArgs

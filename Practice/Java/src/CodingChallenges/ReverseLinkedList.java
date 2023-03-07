@@ -1,10 +1,10 @@
-package CodingChallenges;
+package io.beansprout.CodingChallenges;
 
-import CodingChallenges.Models.DoublyLinkedList;
+import io.beansprout.CodingChallenges.Models.DoublyLinkedList;
 
 import java.util.Random;
 
-import static CodingChallenges.Models.DoublyLinkedList.Node;
+import static io.beansprout.CodingChallenges.Models.DoublyLinkedList.Node;
 
 public class ReverseLinkedList {
     public static void main(String[] args) {

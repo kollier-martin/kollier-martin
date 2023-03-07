@@ -1,4 +1,4 @@
-package Basics;
+package io.beansprout.Basics;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -8,7 +8,7 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
-import static Basics.Repeatables.Author;
+import static io.beansprout.Basics.Repeatables.Author;
 
 @Author(name = "Kollier",
         method = "getDate()",

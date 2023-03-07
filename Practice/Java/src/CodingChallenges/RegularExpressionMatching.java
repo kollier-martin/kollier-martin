@@ -1,4 +1,4 @@
-package CodingChallenges;
+package io.beansprout.CodingChallenges;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

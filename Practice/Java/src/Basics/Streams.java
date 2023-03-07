@@ -1,4 +1,4 @@
-package Basics;
+package io.beansprout.Basics;
 
 import java.util.ArrayList;
 import java.util.Arrays;

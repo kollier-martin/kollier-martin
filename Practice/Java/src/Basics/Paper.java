@@ -1,4 +1,4 @@
-package Basics;
+package io.beansprout.Basics;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

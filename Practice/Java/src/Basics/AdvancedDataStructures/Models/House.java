@@ -1,4 +1,4 @@
-package Basics.AdvancedDataStructures.Models;
+package io.beansprout.Basics.AdvancedDataStructures.Models;
 
 public class House extends Building {
     int age = 10;

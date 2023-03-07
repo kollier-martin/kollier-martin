@@ -1,4 +1,4 @@
-package CodingChallenges;
+package io.beansprout.CodingChallenges;
 
 public class DrawTriangles {
     public static void main(String[] args) {

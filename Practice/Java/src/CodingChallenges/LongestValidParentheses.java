@@ -1,4 +1,4 @@
-package CodingChallenges;
+package io.beansprout.CodingChallenges;
 
 import java.util.HashMap;
 import java.util.Map;

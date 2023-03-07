@@ -1,4 +1,4 @@
-package CodingChallenges.Models;
+package io.beansprout.CodingChallenges.Models;
 
 import lombok.Getter;
 import lombok.Setter;

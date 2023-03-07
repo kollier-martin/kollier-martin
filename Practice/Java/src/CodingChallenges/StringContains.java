@@ -1,4 +1,4 @@
-package CodingChallenges;
+package io.beansprout.CodingChallenges;
 
 public class StringContains {
     public static void main(String[] args) {

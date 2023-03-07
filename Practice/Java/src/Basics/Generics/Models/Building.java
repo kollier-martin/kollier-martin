@@ -1,4 +1,4 @@
-package Basics.Generics.Models;
+package io.beansprout.Basics.Generics.Models;
 
 public class Building {
     int age = 28;

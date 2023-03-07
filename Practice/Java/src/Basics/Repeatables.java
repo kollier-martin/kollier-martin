@@ -1,4 +1,4 @@
-package Basics;
+package io.beansprout.Basics;
 
 import java.lang.annotation.Repeatable;
 import java.lang.annotation.Retention;

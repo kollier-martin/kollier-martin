@@ -1,4 +1,4 @@
-package Basics.AdvancedDataStructures.Models;
+package io.beansprout.Basics.AdvancedDataStructures.Models;
 
 public class Office extends Building {
     int age = 3;

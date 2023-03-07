@@ -1,8 +1,8 @@
-package Basics.Generics;
+package io.beansprout.Basics.Generics;
 
-import Basics.Generics.Models.Building;
-import Basics.Generics.Models.House;
-import Basics.Generics.Models.Office;
+import io.beansprout.Basics.Generics.Models.Building;
+import io.beansprout.Basics.Generics.Models.House;
+import io.beansprout.Basics.Generics.Models.Office;
 
 import java.util.ArrayList;
 import java.util.List;
