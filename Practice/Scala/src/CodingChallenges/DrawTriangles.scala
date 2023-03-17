@@ -3,12 +3,25 @@ package CodingChallenges
 
 @main
 def main(): Unit = {
-  drawTriangles(4)
+  val triangleFactory = new DrawTriangles
+  triangleFactory.makeTriangles(6)
 }
 
-def drawTriangles(numOfTriangles: Integer): Unit = {
-  // Define variables
-  val asterisk:String = "*"
+class DrawTriangles {
+  def makeTriangles(numOfTriangles: Int): Unit = {
+    val aster = "*"
 
-  // How to for loop?
+    for (_ <- 1 to 3) { //starts next triangle
+      var t = 1
+
+      for (_ <- 1 to numOfTriangles) { //creates a new line
+        for (_ <- 1 to t) { //loops asterisks
+          print(aster)
+        }
+
+        println()
+        t += 2
+      }
+    }
+  }
 }
