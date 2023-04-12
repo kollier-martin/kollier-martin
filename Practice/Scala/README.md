@@ -6,27 +6,25 @@ You can define the main function with an annotation in Scala 3.
 
 ```Scala
 @main
-def main(): Unit = {
+def main(): Unit = 
     println("Hello World!")
-}
+
 ```
 
 opposed to the old way ->
 
 ```Scala
 object hello {
-  def main(args: Array[String]) = {
+  def main(args: Array[String]) = 
     println("Hello, World!")
-  }
 }
 ```
 
 Declaring other functions is also easy to do.
 
 ```Scala
-def helloWorld(): Unit = {
+def helloWorld(): Unit = 
   println("Hello World!")
-}
 ```
 
 ## Variable Declaration
@@ -84,11 +82,31 @@ println(raw"Name: $firstName%s $lastName%s \n")
 
 ## Control Constructs
 
-#### IF / IF-ELSE
+#### if / if-else
 
-- structures are structured the same as Java if/else, for loops are a bit different
+- In Scala 3, formatting if statements does not have to follow Java-esque standards
+```Scala
+// Example: An overloaded compare functions
+def divide(a: Int, b: Int): Any =
+  if a == 0 || b == 0 then
+    println("You can not divide by zero.")
+  else
+    a / b
+```
 
-#### FOR Loops
+- All if / if-else statements return a value
+```Scala
+// Example: An overloaded compare functions
+def compare(a: Int, b: Int): Int =
+  if a < b then
+    -1
+  else if a == b then
+    0
+  else
+    1
+```
+
+#### *for* expressions
 
 - Uses something called a generator '<-'. In my terms the generator iterates over a range or values in a collection and
   then assigns the value to "i" during execution of the loop. This replaces the need for Java standards *for (int i = 0;
@@ -120,14 +138,23 @@ println(raw"Name: $firstName%s $lastName%s \n")
       do
         println(s"i = $i, j = $j")   // prints: "i = 2, j = b"
       ```
-- There are ***for expressions*** that can use the ***yield*** keyword instead of the ***do*** keyword to calculate and
-  yield results.
+- There are ***for expressions*** that can use the ***yield*** keyword instead of the ***do*** keyword to calculate and yield results.
     - Example:
       ```Scala
       val doubleInts = for i <- ints yield i * 2
       // this should produce a new list: List[Int] = List(2, 4, 6, 8, 10)
       ```
-
+- Maps can also be used with for loops (of course)
+    - Example:
+  ```Scala
+  val countriesWithCodes = Map(
+    "Afghanistan" -> "AF",
+    "Albania" -> "AL"
+  )
+  
+  for (country, isoTwo) <- countriesWithCodes do println(s"$isoTwo: $isoThree") // Can be typed in the REPL
+  ```
+  
 #### Match Expressions
 
 - ***match*** statements exist and are used like Java switch statements

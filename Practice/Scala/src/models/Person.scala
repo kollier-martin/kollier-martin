@@ -1,18 +1,20 @@
 package io.beansprout
 package models
 
-class Person(name: String, age: Int) {
-  def this(name: String) = {
-    this(name, 0)
-  }
+val DEFAULT_AGE: Int = 18
 
-  def getName: String = name
-
-  def getAge: Int = age
+class Person(var name: String, var age: Int):
 
   override def toString: String =
     s"""{
-       |"name":"${name}",
-       |"age":${age}
+       |"name":"$name",
+       |"age":$age
        |}""".stripMargin
-}
+
+object Person:
+  def apply(name: String): Person =
+    new Person(name, DEFAULT_AGE)
+
+  def apply(name: String, age: Int): Person =
+    new Person(name, age)
+
