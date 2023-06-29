@@ -1,4 +1,4 @@
-package Restaraunt;
+package io.beansprout.Restaraunt;
 
 public class BillCalculator {
     private BillCalculator() throws IllegalAccessException {

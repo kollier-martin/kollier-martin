@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class SmallestInt {
-    public static int smallInteger(int N, int X, int A[]) {
+    public static int smallInteger(int N, int X, int[] A) {
         //this is default OUTPUT. You can change it
         int result = 0;
         ArrayList<Integer> highestNumbers = new ArrayList<>();
@@ -48,7 +48,7 @@ public class SmallestInt {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int X = sc.nextInt();
-        int A[] = new int[N];
+        int[] A = new int[N];
         for (int i = 0; i < N; i++) {
             A[i] = sc.nextInt();
         }

@@ -19,11 +19,7 @@ public class CanWin {
                 win = true;
             } else if (game[i + leap] == 0) {
                 win = true;
-            } else if (game[game.length - 1] >= game.length || game[i + leap] >= game.length) {
-                win = true;
-            } else {
-                win = false;
-            }
+            } else win = game[game.length - 1] >= game.length || game[i + leap] >= game.length;
         }
 
         return win;

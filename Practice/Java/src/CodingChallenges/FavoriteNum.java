@@ -3,7 +3,7 @@ package io.beansprout.CodingChallenges;
 import java.util.Scanner;
 
 public class FavoriteNum {
-    public static int favorite(int L, int R, int N, int A[]) {
+    public static int favorite(int L, int R, int N, int[] A) {
         int result = 0;
 
         // L is the minimum value of the range, R is the highest
@@ -24,7 +24,7 @@ public class FavoriteNum {
         int L = sc.nextInt();
         int R = sc.nextInt();
         int N = sc.nextInt();
-        int A[] = new int[N];
+        int[] A = new int[N];
 
         for (int i = 0; i < N; i++) {
             A[i] = sc.nextInt();

@@ -1,4 +1,4 @@
-package Restaraunt;
+package io.beansprout.Restaraunt;
 
 import java.util.ArrayDeque;
 import java.util.Comparator;

@@ -1,12 +1,12 @@
-package Restaraunt;
+package io.beansprout.Restaraunt;
 
 import lombok.Getter;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static Restaraunt.Menu.Type.ADULT;
-import static Restaraunt.Menu.Type.KIDS;
+import static io.beansprout.Restaraunt.Menu.Type.ADULT;
+import static io.beansprout.Restaraunt.Menu.Type.KIDS;
 
 @Getter
 public class Menu {

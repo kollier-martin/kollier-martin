@@ -1,8 +1,7 @@
 -- This script does random queries
 
-#
-USERS
-	# A 'User' can have multiple ticketes O
+# USERS
+	# A 'User' can have multiple tickets O
 	# Only one USER_ID 
 
 # TICKETS
@@ -16,22 +15,19 @@ USERS
 
 USE Project1;
 
-#
-Query All
+# Query All
 SELECT *
 FROM USERS u
          JOIN JUNCTION j ON u.USER_ID = j.USER_ID
          JOIN TRAINS t ON t.TICKET_ID = j.TRAIN_ID
          JOIN TICKETS t2 ON t2.TICKET_ID = u.TICKET_ID;
 
-#
-This query tells the USER how many tickets they have
+# This query tells the USER how many tickets they have
 SELECT *
 FROM USERS u
          JOIN TICKETS t ON t.TICKET_ID = u.USER_ID;
 
-#
-Adds a description to the ticket
+# Adds a description to the ticket
 UPDATE TICKETS t
     JOIN TRAINS t2
 on t.TICKET_ID = t2.TICKET_ID

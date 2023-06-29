@@ -1,4 +1,4 @@
-package Restaraunt;
+package io.beansprout.Restaraunt;
 
 import lombok.Getter;
 import lombok.Setter;
