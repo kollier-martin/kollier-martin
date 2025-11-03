@@ -1,6 +1,4 @@
-# <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Circle-icons-stack.svg/2048px-Circle-icons-stack.svg.png" width="35" height="35">
-
-## About Me
+# About Me
 
 ```java
 class Greeting {
